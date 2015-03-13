@@ -32,9 +32,18 @@
     color: green;
   }
 
+
+  .ibox-content {
+    .post {
+      width: 90%;
+    }
+  }
+
+
   .post {
     background: #DFDFE2;
     padding: 20px;
     width: 45%;
     border-radius: 5px;
   }
+

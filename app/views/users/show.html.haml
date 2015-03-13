@@ -19,3 +19,7 @@
                     %p= post.text
 
                   %hr
+            - else
+              .no-posts.m-l-lg
+                %h4= link_to "Start following users to see their post here", users_path
+

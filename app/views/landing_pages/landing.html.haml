@@ -8,9 +8,9 @@
               %span.sr-only Toggle navigation
               %i.fa.fa-bars
             %h1.navbar-brand
+              %a{:style => "font-size: 35px", :href => "#"}
+                Snaplr
 
-              %a{:style => "font-size: 35px", :href => "#header"}
-                = image_tag "logo_handwriting.png", height: 55, id: "logo"
           #navbar-collapse-1.collapse.navbar-collapse
             %ul#navigation.nav.navbar-nav.navbar-right
               %li.active
@@ -20,171 +20,17 @@
               %li
                 %a.external{href: "/signin"} Sign In
     %main#main.site-main
-      %section#carousel-1.carousel.slide.section-slide{"data-ride" => "carousel"}
-        .carousel-inner
-          .item.active{:style => "background: url(assets/background/black_cat_wide_dark_2.jpg);"}
-            .container
-              = image_tag "background/hero_text_1.png"
-      / turning off carousel feature
-      / <a class="left carousel-control" href="#carousel-1" data-slide="prev"><span class="fa fa-chevron-left"></span></a>
-      / <a class="right carousel-control" href="#carousel-1" data-slide="next"><span class="fa fa-chevron-right"></span></a>
       %section.section.section-center.section-cta
         .container
-          %h2.section-title
-            %span Wait, 50 percent?
-          %h3
-            We where shocked too. A healthy cat should generally be under 10lbs. With half our cats being overweight and twenty percent obese its become an epidemic.
-
-          %br
-          %br
-
-          %h5.pull-left Sources:
-          %br
-          %br
-          .small.pull-left
-            %a.text-primary{:href => "http://www.petobesityprevention.org/pet-obesity-fact-risks/"} 2013 National Pet Obesity Awareness Day Survey
-          %br
-          .small.pull-left
-            %a.text-primary{:href => "http://www.petobesityprevention.org/pet-obesity-fact-risks/"} VCA Animal Hospitals
-          %br
-          .small.pull-left
-            %a.text-primary{:href => "http://www.2ndchance.info/diabetescat-obesityZoran.pdf"} Obesity in Cats and Dogs
-          %br
-          .small.pull-left
-            %a.text-primary{:href => "http://www.animalplanet.com/pets/healthy-pets/how-to-put-your-cat-on-a-diet/"} Animal Planet
-          %br
-          .small.pull-left
-            %a.text-primary{:href => "http://www.telegraph.co.uk/lifestyle/pets/10325705/Got-a-fat-pet-Its-just-comfort-eating-Cats-and-dogs-diagnosed-with-Bridget-Jones-syndrome.html"} Got a Fat Pet?
-      %section#register.section.section-center
-        .main-action.row
-          .col-md-1.col-md-offset-2.mt30
-            = image_tag "aiko_right.png", height: 100
-          .col-md-6.col-md-offset-0
-            %h3 We are in the processes of building a set of tools to help owners reduce the weight of their cats. Sign up to get email updates on our progress and suggestions on how to help your pet immediately.
-            %br
-          .col-md-4.col-md-offset-4.col-sm-4
-            %a.smooth-scroll.btn.btn-lg.btn-block.btn-danger{:href => "/registrations/new"} Register to Hear More
-
-      %section#carousel-2.carousel.slide.section-slide{"data-ride" => "carousel"}
-        .carousel-inner
-          .item.active{:style => "background: url(assets/background/white_cat_wide_dark.jpg);"}
-            .container
-              = image_tag "background/hero_text_2.png", class: "pull-right"
-      %section#testimonials.section.section-center.section-testimonial
-        .container
-          %h2.section-title
-            %span What are people saying?
-          %i.fa.fa-quote-left.fa-3x
-          #carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
-            .carousel-inner
-              .item.active
-                %blockquote
-                  %p Meow meow meow, THUMBS UP, meow meow.
-                  %small Dusty
-              .item
-                %blockquote
-                  %p Mrrrrowwww, seriously the best.
-                  %small Aiko
-              .item
-                %blockquote
-                  %p Helped my cats loose 4lbs each!
-                  %small Teresa
-            %ol.carousel-indicators
-              %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
-                = image_tag "profiles/dusty.jpg", height: 64, width: 64, class: "img-circle"
-              %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
-                = image_tag "profiles/aiko_2.png", height: 64, width: 64, class: "img-circle"
-              %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
-                = image_tag "profiles/teresa.jpg", height: 64, width: 64, class: "img-circle"
-
-      %section#pricing.section.section-center.section-hilite.section-pricing
-        .container
-          %h2.section-title
-            %span Pricing Table Made Easy
-          .pricing-table
-            .row
-              .col-sm-4.col-sm-offset-2
-                .panel.panel-default
-                  %header.panel-heading
-                    %h1 Tracking Software Only
-                    .the-price
-                      $0
-                      %span.subscript / month
-                  .panel-body
-                    %table.table
-                      %tbody
-                        %tr
-                          %td Use your own scale
-                        %tr.active
-                          %td Enter weights online to track
-                        %tr
-                          %td Recommendations for weight loss
-                  %footer.panel-footer
-                    %a.btn.btn-primary{:href => "/registrations/new"} Register
-              .col-sm-4
-                .panel.panel-primary
-                  %header.panel-heading
-                    %h1 Wireless Scale and Software
-                    .the-price
-                      One time scale purchase + $0
-                      %span.subscript / month
-                  .panel-body
-                    %table.table
-                      %tbody
-                        %tr
-                          %td
-                            %span Use our pet optimized scale
-                            %span.text-danger (still in development)
-                        %tr.active
-                          %td Scale automatically saves weights
-                        %tr
-                          %td Recommendations for weight loss
-                  %footer.panel-footer
-                    %a.btn.btn-primary{:href => "/registrations/new"} Register
-      %section#carousel-3.carousel.slide.section-slide{"data-ride" => "carousel"}
+          %h1.section-title
+            %span Welcome to Snaplr
+          %h2
+            You are going to be famous.
+      %section#carousel-1.carousel.slide.section-slide{"data-ride" => "carousel"}
         .carousel-inner
           .item.active{:style => "background: url(assets/background/dusty_wide_dark_2.jpg);"}
             .container
-              = image_tag "background/hero_text_3.png", class: "pull-right"
-      %section#team.section.section-blog
-        .container
-          %h2.section-title
-            %span Creators
-          .row
-            .col-md-6
-              %article.hentry.post
-                .row
-                  .entry-thumbnail.col-lg-4.col-md-5.col-sm-4
-                    %a.hover-effect{:href => "https://github.com/dladowitz"}
-                      = image_tag "profiles/david.jpg"
-                      %span.overlay
-                        %i.fa.fa-plus
-                  .col-lg-8.col-md-7.col-sm-8
-                    %header.entry-header
-                      %h2.entry-title
-                        %a{:href => "https://github.com/dladowitz"} David
-                    .entry-content
-                      %p
-                        David is a software developer during the week and rock climber on the weekend. He started this project to help his two overweight cats and learn circuit hacking.
-            .col-md-6
-              %article.hentry.post
-                .row
-                  .entry-thumbnail.col-lg-4.col-md-5.col-sm-4
-                    %a.hover-effect{:href => "https://github.com/terhuang"}
-                      = image_tag "profiles/teresa_tahoe.jpg"
-                      %span.overlay
-                        %i.fa.fa-plus
-                  .col-lg-8.col-md-7.col-sm-8
-                    %header.entry-header
-                      %h2.entry-title
-                        %a{:href => "https://github.com/terhuang"} Teresa
-                    .entry-content
-                      %p
-                        Teresa is a chef during the day and learning software development at night.
-                        She's constantly trying to keep her cats from breaking into their automatic feeders and over eating.
-                        She owns and runs
-                        = succeed "." do
-                          %a.text-primary{:href => "http://littlecatcatering.com/"} Little Cat Catering
+              %div{style:"height: 350px; width: 100px"}
 
     %footer#footer.site-footer
       .container
@@ -194,16 +40,10 @@
               %h5.widget-title Contact us
               %p
                 Tell us what you think or connect with us at
-                %a{:href => "mailto:david@littlecatcatering.com?Subject=Little Cat Labs"} david@littlecatcatering.com
-            -#%aside.widget.col-md-3.col-md-push-3.col-sm-6
-            -#  %h5.widget-title Really Love Numbers?
-            -#  %p
-            -#    See for your self the exact math behind out claims. Download our
-            -#    = link_to "calculator & graph generator", "http://www.lastmingear.com/assets/Should-you-buy-your-own-snowsports-apparel-Calculator.xlsx"
-            -#    built using Excel.
+                %a{:href => "mailto:david@littlecatcatering.com?Subject=Little Cat Labs"} david@ladowitz.com.com
         .copyright
           %p
-            © 2015 Little Cat Labs
+            © 2015 Snaplr
             %br/
   .scroll-to-top{"data-offset-top" => "200", "data-spy" => "affix"}
     %a.smooth-scroll{:href => "#page"}

@@ -13,6 +13,6 @@
           .post.m-t-sm
             %h3= post.title
             %h6= post.created_at.strftime("%b %e, %Y")
-            %p= post.text
+            %p= simple_format(post.text.gsub(URI.regexp, '<a href="\0">\0</a>')).html_safe
 
           %hr

@@ -16,7 +16,7 @@
                       Author:
                       = link_to post.user.first_name, user_posts_path(post.user)
                     %h6= post.created_at.strftime("%b %e, %Y")
-                    %p= post.text
+                    %p= simple_format(post.text.gsub(URI.regexp, '<a href="\0">\0</a>')).html_safe
 
                   %hr
             - else

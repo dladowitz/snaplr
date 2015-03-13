@@ -7,20 +7,22 @@
             %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
               %span.clear
                 %span.block.m-t-xs
-                  %strong.font-bold David Williams
-                %span.text-muted.text-xs.block
-                  Art Director
-                  %b.caret
+                  %strong.font-bold
+                    = link_to "#{current_user.first_name.capitalize}", "#{user_path(current_user)}"
             %ul.dropdown-menu.animated.fadeInRight.m-t-xs
               %li
                 %a{:href => "login.html"} Logout
         .logo-element
           IN+
       %li.active
-        %a{:href => "index.html"}
-          %i.fa.fa-th-large
-          %span.nav-label Main view
+        %a{:href => "#{user_path(current_user)}"}
+          %i.fa.fa-dashboard.fa-2x
+          %span.nav-label My Dashboard
       %li
-        %a{:href => "minor.html"}
-          %i.fa.fa-th-large
-          %span.nav-label Minor view
+        %a{:href => "#{new_user_post_path(current_user)}"}
+          %i.fa.fa-pencil.fa-2x
+          %span.nav-label Create a Post
+      %li
+        %a{:href => "#{users_path}"}
+          %i.fa.fa-user.fa-2x
+          %span.nav-label Explore User Posts

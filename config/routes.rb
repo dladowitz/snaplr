@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'posts/index'
+
+  get 'posts/new'
+
+  get 'posts/create'
+
   root to: "landing_pages#landing"
 
   # custom routes
@@ -7,7 +13,11 @@ Rails.application.routes.draw do
   get    :signup,      to: "users#new",                  as: :signup
 
   # resource routes
-  resources :users
+  resources :users do
+    resources :posts, only: [:new, :create, :index]
+    resources :followings, only: [:create, :destroy]
+  end
+
   resources :sessions, only: [:new, :create, :destroy]
 
   resources :registrations, only: [:new, :create] do

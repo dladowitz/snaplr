@@ -10,7 +10,9 @@
           = image_tag "logo_handwriting.png", height: 55, id: "logo"
     #navbar-collapse-1.collapse.navbar-collapse
       %ul#navigation.nav.navbar-nav.navbar-right
-        %li
-          %a.external{:href => "/"} Home
         %li.active
-          %a.current{href: signup_path} Register
+          %a.external{:href => "/"} Home
+        %li
+          %a.current{href: signup_path} Sign Up
+        %li
+          %a.current{href: signin_path} Sign In

@@ -2,33 +2,20 @@
   .col-lg-8
     .ibox.float-e-margins
       .ibox-title
-        %h5
-          Add your cat
-          %small so we can start tracking
+        %h3
+          Here is what people you are following are saying
       .ibox-content
         .row
-          .col-sm-6.b-r
-            %h3.m-t-none.m-b Sign in
-            %p Sign in today for more expirience.
-            %form{:role => "form"}
-              .form-group
-                %label Email
-                %input.form-control{:placeholder => "Enter email", :type => "email"}/
-              .form-group
-                %label Password
-                %input.form-control{:placeholder => "Password", :type => "password"}/
-              %div
-                %button.btn.btn-sm.btn-primary.pull-right.m-t-n-xs{:type => "submit"}
-                  %strong Log in
-                %label
-                  %input.i-checks{:type => "checkbox"}/
-                  Remember me
-          .col-sm-6
-            %h4 Not a member?
-            %p You can create an account:
-            %p.text-center
-              %a{:href => ""}
-                %i.fa.fa-sign-in.big-icon
-            %button.btn.btn-primary.pull-right.m-t-n-xs{:type => "submit"}
-              save
-              %i.fa.fa-sign-in.big-icon
+          .posts.m-t-lg
+            - if @followed_users_posts
+              %ul
+                - @followed_users_posts.each do |post|
+                  .post.m-t-sm
+                    %h3= post.title
+                    %h5
+                      Author:
+                      = link_to post.user.first_name, user_posts_path(post.user)
+                    %h6= post.created_at.strftime("%b %e, %Y")
+                    %p= post.text
+
+                  %hr

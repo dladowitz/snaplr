@@ -18,4 +18,23 @@ class User < ActiveRecord::Base
   validates :password,   presence: { on: create }, length: { minimum: 6 }, if: :password_digest_changed?
 
   has_secure_password
+
+  has_many :follower_relations, :class_name => 'Followings', :foreign_key => 'user_id'
+  has_many :following_relations, :class_name => 'Followings', :foreign_key => 'follower_id'
+
+  has_many :posts
+
+  def followers
+    followers = []
+
+    self.follower_relations.each { |relation| followers << relation.follower }
+    followers.uniq
+  end
+
+  def following
+    following = []
+
+    self.following_relations.each { |relation| following << relation.user }
+    following.uniq
+  end
 end

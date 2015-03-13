@@ -1,0 +1,18 @@
+.container
+  .row
+    - unless current_user == @user
+      - if @following
+        = link_to "un-follow", user_following_path(@user, @following), method: :delete, class: "btn btn-lg btn-danger pull-left m-r m-t"
+      - else
+        = link_to "follow", user_followings_path(@user), method: :post, class: "btn btn-lg btn-primary pull-left m-r m-t"
+
+  .row
+    .posts.m-t-lg
+      %ul
+        - @posts.each do |post|
+          .post.m-t-sm
+            %h3= post.title
+            %h6= post.created_at.strftime("%b %e, %Y")
+            %p= post.text
+
+          %hr

@@ -1,11 +1,8 @@
 .row.wrapper.border-bottom.white-bg.page-heading
   .col-lg-10
     %h2= @page_name
-    %ol.breadcrumb
-      %li
-        = link_to "Home", user_path(session[:id])
-      %li
-        %a Forms
-      %li.active
-        %strong Basic Form
-  .col-lg-2
+  %ul.nav.navbar-top-links.navbar-right
+    %li
+      = link_to session_path(current_user), method: :delete do
+        Sign Out
+        %i.fa.fa-sign-out
